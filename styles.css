@@ -64,18 +64,20 @@ body{
     display: none;
   }
 
-  .header ul.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #202020;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
+/* Update this rule in your existing CSS */
+.header ul.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #202020;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 98;
+}
+
 
   .header ul li {
     margin: 10px 0;
@@ -249,6 +251,7 @@ profile-photo .img{
   color: #fed700;
   font-size: 3rem; 
 }
+
 .profile-text p{
   color:#e5e5e5;
 }
@@ -796,17 +799,41 @@ profile-photo .img{
   }
 
   .header ul.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background-color: #202020;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      z-index: 98;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #202020;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 98;
   }
+  
+  .header ul.active li {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .header ul.active li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .header ul.active li a.active {
+    color: #fed700;
+  }
+  
+  .header ul.active li a:hover {
+    color: #fed700;
+  }
+  
+
 }
 
  /* Add this media query at the end of your existing CSS file */
@@ -964,3 +991,37 @@ profile-photo .img{
 
   /* Adjust other styles as needed */
 }
+
+/* Add this style to center the "Home" text */
+.header ul.active li:first-child {
+  text-align: center;
+  margin-right: auto;
+}
+
+/* Existing styles... */
+@media only screen and (max-width: 767px) {
+  /* ... Other existing styles ... */
+
+  /* Center-align "Home" text in the navigation menu */
+  .header ul.active li:first-child {
+    text-align: center;
+    margin-right: auto;
+  }
+}
+.profile-text p {
+  color: #e5e5e5;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 20px 0; /* Add margin to the top and bottom for spacing */
+  padding: 0 20px; /* Add padding to the left and right for additional spacing */
+  max-width: 100%; /* Ensure the text does not overflow its container */
+}
+
+/* Additional styles for smaller screens */
+@media only screen and (max-width: 767px) {
+  .profile-text p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
