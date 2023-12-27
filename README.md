@@ -52,4 +52,8 @@ If you'd like to contribute to this project, follow these steps:
 
 ## 📄 License
 
+<<<<<<< HEAD
 This project is licensed under the [MIT License](LICENSE).
+=======
+This project is licensed under the [MIT License](LICENSE).
+>>>>>>> b0c6547d45a158e328360bb10d23d921be5c0141
